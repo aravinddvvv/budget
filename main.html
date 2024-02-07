@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&amp;display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white-tertiary" style="box-shadow: 5px 2px 9px black ;">
+        <div class="container-fluid">
+            <h1><b style="color: rgb(215, 27, 27);">Ezzy</b>&nbsp;Budget</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        </div>
+    </nav><br>
+    <center>
+      
+        <h2><b>Budget Calculator</b></h2>
+    </center>
+    <div class="row">
+
+        <div class="col-7">
+            <div class="wrapper">
+                <div style="margin-top: 80px;" class="container">
+                    <div class="sub-container">
+                        <!-- Budget -->
+                        <div class="total-amount-container ">
+                            <h2>
+                                <center>Budget </center>
+                            </h2>
+                            <p class="hide error" id="budget-error">
+                                Value cannot be empty or negative
+                            </p>
+                            <input style="margin-top: 20px;" type="text" class="product-title" id=""
+                                placeholder="Enter Income type" />
+                            <input type="number" id="total-amount" placeholder="Enter Total Amount" />
+                            <center>
+                                <button class="submit" id="total-amount-button">Add Income</button>
+                            </center>
+                        </div>
+
+                        <!-- Expenditure -->
+                        <div class="user-amount-container">
+                            <h2>
+                                <center>Expenses </center>
+                            </h2>
+                            <p class="hide error" id="product-title-error">
+                                Values cannot be empty
+                            </p>
+                            <input style="margin-top: 20px;" type="text" class="product-title" id="product-title"
+                                placeholder="Enter expense type" />
+                            <input type="number" id="user-amount" placeholder="Enter Amount" />
+                            <center>
+                                <button class="submit" id="check-amount">Add Expense</button>
+                            </center>
+                        </div>
+                    </div>
+                    <!-- Output -->
+                    <div class="output-container flex-space">
+                        <div>
+                            <p>Total Budget</p>
+                            <span id="amount">0</span>
+                        </div>
+                        <div>
+                            <p>Expenses</p>
+                            <span id="expenditure-value">0</span>
+                        </div>
+                        <div>
+                            <p>Balance</p>
+                            <span id="balance-amount">0</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- List -->
+                <div class="list">
+                    <h3>Expense List</h3>
+                    <div class="list-container" id="list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+  
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
